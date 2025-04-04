@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+        body { background-color: #F1F1F2; text-align: center; }
+        
+        /* Navigation Bar */
+        nav { background: #93fbbe; padding: 15px; }
+        nav a { 
+            color: rgb(10, 2, 2); 
+            text-decoration: none; 
+            margin: 20px; 
+            font-size: 18px; 
+            display: inline-block; 
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+        nav a:hover { background: #e14b4b; color: #f15a3c; transition: 0.3s; }
+        
+        /* Marquee Section */
+        marquee { 
+            background: #93fbbe; 
+            color: #050707; 
+            padding: 10px; 
+            font-size: 18px; 
+            font-weight: bold; 
+        }
+        
+        /* Main Content */
+        .content { padding: 40px; display: block; line-height: 1.8; }
+        .content img { width: 150px; margin-bottom: 20px; }
+        .content h1 { color: #93fbbe; margin-bottom: 10px; font-size: 32px; }
+        .content p { font-size: 22px; color: #333; }
+        .content .extra-content { margin-top: 20px; padding: 20px; background: #eee; border-radius: 10px; text-align: left; display: inline-block; max-width: 600px; }
+        .content .extra-content h2 { font-size: 28px; }
+        .content .extra-content p { font-size: 20px; }
+
+        /* Contact Section */
+        .contact { display: none; padding: 40px; }
+        .contact h2 { color: #93fbbe; }
+        .contact p { font-size: 18px; color: #333; margin: 10px 0; }
+
+        /* Iframe Container */
+        .iframe-container { margin-top: 20px; }
+        iframe { 
+            width: 80%; 
+            height: 500px; 
+            border: 2px solid #93fbbe; 
+            display: none; 
+            margin: 20px auto; 
+            background: white;
+        }
+
+        /* Footer */
+        footer { 
+            background: #93fbbe; 
+            color: white; 
+            text-align: center; 
+            padding: 15px; 
+            margin-top: 20px; 
+        }
+        footer a { 
+            color: white; 
+            text-decoration: none; 
+            margin: 10px; 
+            font-size: 18px; 
+            display: inline-block; 
+            padding: 5px 10px;
+        }
+        footer a:hover { text-decoration: underline; color: #A1D6E2; transition: 0.3s; }
+        /* Sitemap */
+        .sitemap { padding: 20px; background: #000; }
+        .sitemap h3 { color: white; }
+        .sitemap ul { list-style-type: none; }
+        .sitemap ul li { margin: 5px 0; }
+        .sitemap ul li a { color: white; text-decoration: none; }
+        .sitemap ul li a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <nav>
+        <a href="#" onclick="showHome()">Home</a>
+        <a href="#" onclick="showContact()">Contact Us</a>
+    </nav>
+    
+    <!-- Marquee Section -->
+    <marquee>Karnavati University || Unitedworld Institute Of Technology</marquee>
+    
+    <!-- Main Content -->
+    <div class="content" id="mainContent">
+        <img src="ku_logo.png" alt="KU Logo">
+        <h1>Welcome to Our Website</h1>
+        <p>This website provides students with access to their timetables and results in an easy-to-use interface.</p>
+        <p>Stay updated with your academic schedule and performance seamlessly.</p>
+        <div class="extra-content">
+            <h2>About Our Portal</h2>
+            <p>Our platform is designed to help students efficiently manage their academic schedules and track their performance.</p>
+            <p>We provide a user-friendly interface where students can easily access their timetables and results with just a few clicks.</p>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="contact" id="contactSection">
+        <h2>Contact Us</h2>
+        <p>Phone: 6354532131</p>
+        <p>Email: sumantuahir2005@gmail.com</p>
+    </div>
+
+    <!-- Iframe Container -->
+    <div class="iframe-container">
+        <iframe id="displayFrame" src=""></iframe>
+    </div>
+    
+    <!-- Footer Section -->
+    <footer>
+        <div class="sitemap">
+
+            <ul>
+                <a href="#" onclick="showHome()">Home</a>
+                <a href="#" onclick="showContact()">Contact Us</a>
+                <a href="#" onclick="loadContent('time_table.html')">TimeTable</a>
+                <a href="#" onclick="loadContent('marksheet.html')">Result</a>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        function loadContent(page) {
+            document.getElementById("mainContent").style.display = "none";
+            document.getElementById("contactSection").style.display = "none";
+            var iframe = document.getElementById("displayFrame");
+            iframe.src = page;
+            iframe.style.display = "block";
+        }
+
+        function showHome() {
+            document.getElementById("mainContent").style.display = "block";
+            document.getElementById("contactSection").style.display = "none";
+            var iframe = document.getElementById("displayFrame");
+            iframe.style.display = "none";
+            iframe.src = "";
+        }
+
+        function showContact() {
+            document.getElementById("mainContent").style.display = "none";
+            document.getElementById("contactSection").style.display = "block";
+            var iframe = document.getElementById("displayFrame");
+            iframe.style.display = "none";
+            iframe.src = "";
+        }
+    </script>
+</body>
+</html>

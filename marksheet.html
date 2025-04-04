@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marksheet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #000;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header img {
+            width: 100px;
+        }
+        .header h1 {
+            font-size: 24px;
+            margin: 10px 0;
+            color: #d2232a;
+        }
+        .header h2 {
+            font-size: 18px;
+            margin: 5px 0;
+        }
+        .details, .grades {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        .details th, .details td, .grades th, .grades td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: left;
+        }
+        .details th, .grades th {
+            background-color: #f2f2f2;
+        }
+        .footer {
+            text-align: left;
+            margin-top: 20px;
+        }
+        .footer p {
+            margin: 5px 0;
+        }
+        .signature {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+        .signature div {
+            text-align: center;
+        }
+        .signature img {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header" style="text-align: center;">
+        <img src="KU_logo.png" width="110" height="100" alt="Karnavati University Logo" style="display: inline-block; margin: 0 10px;">
+        <!-- <img src="UIT.png" width="100" height="100" alt="Unitedworld Institute of Technology" style="display: inline-block; margin: 0 10px;"> -->
+        <h1>UIT, Karnavati University</h1>
+        <h2>Final Marksheet</h2>
+        <h3>BSc. Semester 4</h3>
+        <h3>Sumantu Ahir , 202307010048</h3>
+    </div>
+        <table class="grades">
+            <tr>
+                <th rowspan="2">Course Code &amp; Course Name</th>
+                <th rowspan="2">Credit</th>
+                <th colspan="2">Internal Evaluation</th>
+                <th colspan="2">External Evaluation</th>
+                <th rowspan="2">Total</th>
+                <th rowspan="2">Grade</th>
+            </tr>
+            <tr>
+                <th>Max</th>
+                <th>Obtained</th>
+                <th>Max</th>
+                <th>Obtained</th>
+            </tr>
+            <tr>
+                <td>23BSAE21 - Professional Communication and Behaviour-II</td>
+                <td>4</td>
+                <td>50</td>
+                <td>47</td>
+                <td>50</td>
+                <td>30</td>
+                <td>77</td>
+                <td>O</td>
+            </tr>
+            <tr>
+                <td>23BSMD21 - Digital and Social Media Marketing</td>
+                <td>4</td>
+                <td>50</td>
+                <td>45</td>
+                <td>50</td>
+                <td>20</td>
+                <td>65</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>23BSPC21 - Constitution of India</td>
+                <td>4</td>
+                <td>50</td>
+                <td>40</td>
+                <td>50</td>
+                <td>20</td>
+                <td>60</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>23BSPC22 - Computer Organization and Architecture</td>
+                <td>4</td>
+                <td>50</td>
+                <td>40</td>
+                <td>50</td>
+                <td>40</td>
+                <td>80</td>
+                <td>O</td>
+            </tr>
+            <tr>
+                <td>23BSPE21 - Software Engineering and Agile Methedologies</td>
+                <td>4</td>
+                <td>50</td>
+                <td>45</td>
+                <td>50</td>
+                <td>45</td>
+                <td>90</td>
+                <td>O</td>
+            </tr>
+            <tr>
+                <td>23BSSE21 - Database Management Systems</td>
+                <td>2</td>
+                <td>50</td>
+                <td>40</td>
+                <td>50</td>
+                <td>20</td>
+                <td>60</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>23BSVA21 - Open Source Software Tools</td>
+                <td>2</td>
+                <td>50</td>
+                <td>44</td>
+                <td>59</td>
+                <td>20</td>
+                <td>64</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <th>Total:</th>
+                <td>22</td>
+                <td>350</td>
+                <td>301</td>
+                <td>350</td>
+                <td>195</td>
+                <td>496</td>
+                <td></td>
+            </tr>
+        </table>
+        <div class="footer">
+            <p>SGPA: 7.08</p>
+            <p>Result: First Class With Distinction</p>
+            <p></p>
+
+        </div>
+    </div>
+</body>
+</html>
